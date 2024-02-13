@@ -1,0 +1,175 @@
+main {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #d2f7ff;
+}
+
+h1:first-child {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.faces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    cursor: pointer;
+}
+
+.face1,
+.face5 {
+    position: relative;
+    top: 12.5rem;
+}
+
+.face2,
+.face4 {
+    position: relative;
+    top: 2.5rem;
+}
+
+.face2 {
+    right: 2.5rem;
+}
+
+.face4 {
+    left: 2.5rem;
+}
+
+.face3 {
+    position: relative;
+    top: -0.5rem;
+}
+
+.measurer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%; /* Hace que el contenedor sea un círculo */
+    overflow: hidden; /* Oculta las partes de los elementos que se salgan del círculo */
+}
+
+.stripe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 50%, 100% 50%, 100% 0);
+    cursor: pointer;
+}
+
+.stripe1 {
+    transform: rotate(225deg);
+}
+
+.stripe1:hover {
+    border: 1px solid black;
+}
+
+.stripe2 {
+    transform: rotate(261deg);
+}
+
+.stripe3 {
+    transform: rotate(297deg);
+}
+
+.stripe4 {
+    transform: rotate(333deg);
+}
+
+.stripe5 {
+    transform: rotate(9deg);
+    clip-path: polygon(50% 50%, 100% 42%, 100% 0);
+}
+
+.stripe1 {
+    background-color: red;
+}
+
+.stripe2 {
+    background-color: orange;
+}
+
+.stripe3 {
+    background-color: yellow;
+}
+
+.stripe4 {
+    background-color: lightgreen;
+}
+
+.stripe5 {
+    background-color: green;
+}
+
+.hole {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 150px;
+    left: 150px;
+    border-radius: 50%;
+    background-color: #d2f7ff;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+.arrow {
+    position: relative;
+    bottom: 50px;
+    width: 20px;
+    height: 150px;
+    background-color: black;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+.state {
+    position: absolute;
+
+    width: 100%;
+    top: 62.5%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    z-index: 10;
+}
+
+.send {
+    position: absolute;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    transform: translate(40rem, 0);
+}
+
+.send button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background-color 0.5s, color 0.125s;
+}
+
+.send button:hover {
+    background-color: black;
+    color: white;
+}
